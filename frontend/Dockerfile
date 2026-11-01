@@ -10,6 +10,10 @@ COPY package*.json ./
 # Install dependencies
 RUN npm install
 
+# Accept build argument 
+ARG VITE_API_URL 
+ENV VITE_API_URL=$VITE_API_URL
+
 # Copy the rest of the application code to the working directory
 COPY . .
 
