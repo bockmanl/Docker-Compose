@@ -47,7 +47,7 @@ jobs:
       if: success()
       uses: google-github-actions/auth@v1
       with:
-        credentials_json: ${{ secrets.GCP_SA_KE }}
+        credentials_json: ${{ secrets.GCP_SA_KEY }}
         project_id: ${{ secrets.GCP_PROJECT_ID }}
     
     - name: Set up Google Cloud CLI
