@@ -1,0 +1,14 @@
+   Automated testing in CI/CD pipelines improves software reliability compared to manual testing for several different reasons. For one, automated testing is going to be much more 
+   consistent compared to manual testing. Every automated test is going to be the exact same statements executed, whereas in a manual test one typo can occur and derail the entire 
+   process. This can make developers look for errors that don’t exist and waste their time. It also creates a rapid feedback loop for developers when they use automated testing. 
+   After they push code, they find out within minutes whether it worked or not. Additionally, it helps to prevent API leaks by utilizing more secure ways of accessing the information 
+   without risking it getting committed to Git when doing manual testing. This is done by accessing the key with features like Git secrets. Now when I used automated testing and ran 
+   into an error, I found a couple of specific benefits before it deployed. For one, it made it very easy to tell that the deployment failed. I was able to see in the Git Actions 
+   page that it failed and didn’t have to go looking on the links where the project should be displayed to see whether or not it was deployed. It also ensured that a broken web 
+   application never made it to public code. This is helpful to avoid small mistakes that would make a company look bad. Now looking towards 2 of the biggest platforms used to run 
+   these tests, GitHub Actions and Jenkins, I'll look into which one is better when. For one, GitHub Actions requires zero server setup and has all of the runner environments 
+   managed by GitHub. It uses YAML file configuration stored by the rest of the code and works seamlessly with Git. Jenkins is selfhosted and requires provisioning, configuration, 
+   and maintaining dedicated master/node servers. It uses Jenkins files and requires extra plugins to work with Git. If you are hosting your code on Git, want a lightweight 
+   zero-maintenance solution, or simply prefer YAML configuration, I would recommend Git. I would choose Jenkins if you have more legacy code or have much more complex needs. 
+   This automation approach might scale for larger projects by enforcing passed CI/CD tests before merging into main, running several different tests in parallel to speed up build times, 
+   and creating general tests that can be reused and rebuilt instead of building custom ones every time.
